@@ -22,7 +22,7 @@
 			<!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input -->
 
 			<label for="benchmark">Select a Benchmark Product</label>
-			<select>
+			<select id="benchmark">
 				<option value="3" data-icon="Metro">Metro Tciket ($3)</option>
 				<option value="3.50">City Bike ($3.50)</option>
 				<option value="5">Coffee ($5)</option>
@@ -39,6 +39,7 @@
 			<button onclick="calculate()">Calculate</button>
 
 			<!-- result -->
+			<div id="result-box"></div>
 
 		</div>
 		<footer>
