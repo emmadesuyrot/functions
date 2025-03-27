@@ -14,7 +14,10 @@
 			
 			<label>Enter Price in $</label>
 
-			<input>
+			<input type="number" id="price" placeholder="e.g., 60" min="0">
+			
+			<!-- input example from mdn to state the number control, examlple and min/max -->
+			<!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input -->
 
 			<label>Select a Benchmark Product</label>
 			<select>
@@ -28,9 +31,11 @@
 				<option value="50">NBA Ticket ($50)</option>
 				<option value="200">Helicopter Ride ($200)</option>
 			</select>
+
+			<button>Reset</button>
 			
 			<button>Calculate</button>
-			
+
 		</div>
 		<footer>
 			<p>© 2025, Emma de Suyrot</p>
