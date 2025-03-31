@@ -1,9 +1,11 @@
-<html></html>
+<html>
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Typography and Interaction</title>
-		<link href="assets/reset.css" rel="stylesheet">
-		<link href="assets/style.css" rel="stylesheet">
+		<!-- <link href="assets/reset.css" rel="stylesheet">
+		<link href="assets/style.css" rel="stylesheet"> -->
+
+		<script defer src="main.js"></script>
 	</head>
 	<body>
 		<header class="gutters">
@@ -23,22 +25,24 @@
 
 			<label for="benchmark">Select a Benchmark Product</label>
 			<select id="benchmark">
-				<option value="3" data-icon="Metro">Metro Tciket ($3)</option>
-				<option value="3.50">City Bike ($3.50)</option>
-				<option value="5">Coffee ($5)</option>
-				<option value="10">Beer($10)</option>
-				<option value="12">Chipotle Bowl ($12)</option>
-				<option value="15">Uniqlo Mini T-Shirt ($15)</option>
-				<option value="20">Cocktail ($20)</option>
-				<option value="50">NBA Ticket ($50)</option>
-				<option value="200">Helicopter Ride ($200)</option>
+				<option value="3" data-icon="🚇">Metro Tciket ($3)</option>
+				<option value="3.50" data-icon="🚲">City Bike ($3.50)</option>
+				<option value="5" data-icon="☕️">Coffee ($5)</option>
+				<option value="10" data-icon="🍺">Beer($10)</option>
+				<option value="12" data-icon="🌯">Chipotle Bowl ($12)</option>
+				<option value="15" data-icon="👕">Uniqlo Mini T-Shirt ($15)</option>
+				<option value="20" data-icon="🍹">Cocktail ($20)</option>
+				<option value="50" data-icon="🏀">NBA Ticket ($50)</option>
+				<option value="200" data-icon="🚁">Helicopter Ride ($200)</option>
 			</select>
 
-			<button onclick="resetForm()">Reset</button>
-			<!-- <input type="reset" value="Reset" /> -->
+			<!-- <button onclick="resetForm()">Reset</button> -->
 			<button onclick="calculate()">Calculate</button>
+			<!-- <input type="reset" value="Reset" onclick="resetForm()"/> -->
+			<button onclick="resetForm()">Reset</button>
 
 			<!-- result -->
+			<p>It's worth:</p>
 			<div id="result-box"></div>
 
 		</div>
