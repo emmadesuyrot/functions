@@ -25,10 +25,10 @@
 
 			<label for="benchmark">Select a Benchmark Product</label>
 			<select id="benchmark">
-				<option value="3" data-icon="🚇">Metro Tciket ($3)</option>
+				<option value="3" data-icon="🚇">Metro Ticket ($3)</option>
 				<option value="3.50" data-icon="🚲">City Bike ($3.50)</option>
 				<option value="5" data-icon="☕️">Coffee ($5)</option>
-				<option value="10" data-icon="🍺">Beer($10)</option>
+				<option value="10" data-icon="🍺">Beer ($10)</option>
 				<option value="12" data-icon="🌯">Chipotle Bowl ($12)</option>
 				<option value="15" data-icon="👕">Uniqlo Mini T-Shirt ($15)</option>
 				<option value="20" data-icon="🍹">Cocktail ($20)</option>
@@ -36,14 +36,12 @@
 				<option value="200" data-icon="🚁">Helicopter Ride ($200)</option>
 			</select>
 
-			<!-- <button onclick="resetForm()">Reset</button> -->
-			<button onclick="calculate()">Calculate</button>
-			<!-- <input type="reset" value="Reset" onclick="resetForm()"/> -->
-			<button onclick="resetForm()">Reset</button>
+			<button id="calculateBtn">See Benchmark Quantity</button>
+			<button id="resetBtn">Clear & Start Over</button>
 
 			<!-- result -->
-			<p>It's worth:</p>
-			<div id="result-box"></div>
+			<h3>It's worth:</h3>
+			<div id="result-box" class="empty-state">Your result will appear here</div>
 
 		</div>
 		<footer>

@@ -16,11 +16,13 @@ function calculate() {
 	// Get the input values
 	const price = document.getElementById('price').value;
 	const benchmarkSelect = document.getElementById('benchmark');
-	const benchmark = benchmarkSelect.value;
+	const benchmark = parseFloat(benchmarkSelect.value);
 	const icon = benchmarkSelect.options[benchmarkSelect.selectedIndex].getAttribute('data-icon');
-	
+
 	const resultBox = document.getElementById('result-box');
 	resultBox.innerHTML = '';  // Clear previous results
+
+	resultBox.classList.remove('empty-state');
 
 	// Validation
 	// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN 
@@ -30,9 +32,9 @@ function calculate() {
 		return;
 	}
 
-	if (price < 3) {
-	resultBox.textContent = `Your price is too low for this item. Please enter a higher amount (at least $${benchmark}).`;
-	return;
+	if (price < benchmark) {
+		resultBox.textContent = `Your price is too low for this item. Please enter a higher amount (at least $${benchmark}).`;
+		return;
 	}
 	// Used template literals (backticks `) for string interpolation
 
@@ -44,10 +46,7 @@ function calculate() {
 	
 	// Display the quantity and icons
 	// Currently using emojis but in the future will add illustrations (svg or png?)
-	let iconsHtml = '';
-	for (let i = 0; i < quantity; i++) {
-		iconsHtml += icon + ' ';
-	}
+	const iconsHtml = icon.repeat(quantity);
 	resultBox.innerHTML = `<span>Quantity: ${quantity}</span><br><span>${iconsHtml}</span>`;
 }
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for
