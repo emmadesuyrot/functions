@@ -8,7 +8,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		calculateButton.onclick = () => {
 				const price = document.getElementById('price').value;
-				const benchmark = parseFloat(document.getElementById('benchmark').value);
+				const benchmarkSelect = document.getElementById('benchmark');
+				const benchmark = parseFloat(benchmarkSelect.value);
+				const selectedOption = benchmarkSelect.options[benchmarkSelect.selectedIndex];
+				const icon = selectedOption.getAttribute('data-icon');
+				const itemName = selectedOption.textContent.split(" ")[1];
 				const resultBox = document.getElementById('result-box');
 				resultBox.innerHTML = '';
 			
@@ -24,9 +28,18 @@ document.addEventListener('DOMContentLoaded', () => {
 				return;
 			}
 
-			resultBox.innerHTML = `You can buy ${Math.floor(price / benchmark)} items.`;
-				resultModal.showModal();
-		};
+			const quantity = Math.floor(price / benchmark);
+
+			let iconsDisplay = quantity <= 10 ? icon.repeat(quantity) : ''; 
+			let resultText = `You can buy <strong>${quantity}</strong> ${icon} ${itemName}.`;
+
+			resultBox.innerHTML = `
+				<p>${resultText}</p>
+				<p class="icons">${iconsDisplay}</p>
+			`;
+
+		resultModal.showModal();
+	};
 		// Used template literals (backticks `) for string interpolation
 
 		closeButtons.forEach(button => {
