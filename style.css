@@ -2,8 +2,8 @@
 	--primary-color: black;
 	--primary-font: 'Bagel Fat One';
 	--secondary-font: 'Open Sans', sans-serif;
-	--background-color: grey;
-	--text-color: white;
+	--background-color: rgb(255, 194, 238);
+	--text-color: black;
 	--button-padding: 12px 24px;
 	--font-size-base: 1rem;
 	--font-size-heading: 2rem;
@@ -32,7 +32,8 @@ h1, h2, h3 {
 
 h1 {
 	font-family: var(--primary-font);
-	font-size: var(--font-size-heading);
+	font-size: calc(var(--font-size-heading) * 1.2);
+	margin-bottom: 20px;
 }
 
 h2 {
@@ -40,13 +41,83 @@ h2 {
 }
 
 button {
-	background-color: var(--primary-color);
-	color: var(--text-color);
-	font-family: var(--secondary-font);
-	border: none;
 	padding: var(--button-padding);
 	font-size: var(--font-size-base);
 	border-radius: 8px;
+	margin: 10px;
+	padding: 10px;
+
 
 	cursor: pointer;
+}
+
+input[type="number"], select {
+	padding: 10px;
+	font-size: 1rem;
+	width: 100%;
+	max-width: 300px;
+	margin: 0 auto;
+	border-radius: 5px;
+}
+
+input[type="number"]:focus, select:focus {
+	border: 2px solid #ff00d4;
+}
+
+label {
+	display: block;
+	margin: 15px 0 5px;
+}
+
+/* Style for the <dialog> modal */
+.modal {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 80%;
+	max-width: 400px;
+	padding: 20px;
+	border: none;
+	border-radius: 10px;
+	background: white;
+	box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modal::backdrop {
+	background: rgba(0, 0, 0, 0.4);
+}
+
+/* Modal Content */
+.modal-content {
+	position: relative;
+	text-align: center;
+}
+
+/* Close Button */
+.close-btn {
+	position: absolute;
+	top: 10px;
+	right: 15px;
+	font-size: 24px;
+	color: #aaa;
+	background: none;
+	border: none;
+	cursor: pointer;
+}
+
+.close-btn:hover {
+	color: black;
+}
+
+/* text inside modal*/
+h3 {
+	font-size: 1.5rem;
+	margin-bottom: 15px;
+}
+
+#result-box {
+	font-size: 1.2rem;
+	margin-top: 10px;
+	color: #333;
 }

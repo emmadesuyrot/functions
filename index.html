@@ -39,11 +39,20 @@
 			</select>
 
 			<button id="calculateBtn">See Benchmark Quantity</button>
-			<button id="resetBtn">Clear & Start Over</button>
+			<!-- <button id="resetBtn">Clear & Start Over</button> -->
 
-			<!-- result -->
+			<!-- result
 			<h3>It's worth:</h3>
-			<div id="result-box" class="empty-state">Your result will appear here</div>
+			<div id="result-box" class="empty-state">Your result will appear here</div> -->
+
+			<!-- Modal -->
+			<dialog id="resultModal" class="modal">
+				<div class="modal-content">
+					<span class="close-btn">&times;</span>
+					<h3>It's worth:</h3>
+					<div id="result-box" class="empty-state">Your result will appear here</div>
+				</div>
+			</dialog>
 
 		</div>
 		<footer>
