@@ -37,15 +37,26 @@ let calculate= () => {
 	// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN 
 	// Used isNaN() to check if the user input for the price is a valid number
 	if (!price || isNaN(price) || price <= 0) {
-		resultBox.textContent = 'Please enter a valid price.';
+		document.getElementById('error-message').textContent = 'Please enter a valid price.';
+		errorModal.showModal();
 		return;
 	}
 
 	if (price < benchmark) {
-		resultBox.textContent = `Your price is too low for this item. Please enter a higher amount (at least $${benchmark}).`;
+		document.getElementById('error-message').textContent = `Your price is too low for this item. Please enter a higher amount (at least $${benchmark}).`;
+		errorModal.showModal();
 		return;
 	}
+
+	resultBox.innerHTML = `You can buy ${Math.floor(price / benchmark)} items.`;
+		resultModal.showModal();
 	// Used template literals (backticks `) for string interpolation
+
+	closeButtons.forEach(button => {
+		button.onclick = () => {
+			button.closest('dialog').close();
+		};
+});
 
 	let quantity = Math.floor(price / benchmark); // Calculate the number of items
 	// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor

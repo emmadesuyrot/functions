@@ -39,13 +39,8 @@
 			</select>
 
 			<button id="calculateBtn">See Benchmark Quantity</button>
-			<!-- <button id="resetBtn">Clear & Start Over</button> -->
 
-			<!-- result
-			<h3>It's worth:</h3>
-			<div id="result-box" class="empty-state">Your result will appear here</div> -->
-
-			<!-- Modal -->
+			<!-- Result Modal -->
 			<dialog id="resultModal" class="modal">
 				<div class="modal-content">
 					<span class="close-btn">&times;</span>
@@ -54,6 +49,12 @@
 				</div>
 			</dialog>
 
+			<!-- Error Modal -->
+			<dialog id="errorModal" class="modal">
+				<div class="modal-content">
+					<button class="close-btn">&times;</button>
+					<h3>Error</h3>
+					<p id="error-message"></p>
 		</div>
 		<footer>
 			<p>© 2025, Emma de Suyrot</p>
