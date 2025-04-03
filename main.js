@@ -50,7 +50,7 @@ function calculate() {
 	resultBox.innerHTML = `<span>Quantity: ${quantity}</span><br><span>${iconsHtml}</span>`;
 }
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for
-// Used a for loop to generate the right number of icons based on the calculated quantity, and then used innerHTML to display those icons in the result box
+// Used for loop to generate the right number of icons based on the calculated quantity, and then used innerHTML to display those icons in the result box
 
 // Reset form inputs and result display
 function resetForm() {

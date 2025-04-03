@@ -1,0 +1,52 @@
+:root {
+	--primary-color: black;
+	--primary-font: 'Bagel Fat One';
+	--secondary-font: 'Open Sans', sans-serif;
+	--background-color: grey;
+	--text-color: white;
+	--button-padding: 12px 24px;
+	--font-size-base: 1rem;
+	--font-size-heading: 2rem;
+	--font-size-subheading: 1.5rem;
+}
+
+body {
+	
+	background-color: var(--background-color);
+	color: var(--text-color);
+	font-family: var(--secondary-font);
+	padding: 15px;
+	text-align: center;
+	line-height: 1.6;
+	
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+h1, h2, h3 {
+	color: var(--primary-color);
+	margin-bottom: 20px;
+}
+
+h1 {
+	font-family: var(--primary-font);
+	font-size: var(--font-size-heading);
+}
+
+h2 {
+	font-size: var(--font-size-subheading);
+}
+
+button {
+	background-color: var(--primary-color);
+	color: var(--text-color);
+	font-family: var(--secondary-font);
+	border: none;
+	padding: var(--button-padding);
+	font-size: var(--font-size-base);
+	border-radius: 8px;
+
+	cursor: pointer;
+}
