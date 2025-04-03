@@ -1,7 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
 	let initInteraction = () => {
 		let resultModal = document.getElementById('resultModal');
-		let errorModal = document.getElementById('errorModal');
+		// If modal is the better option for the error state (below)
+		// let errorModal = document.getElementById('errorModal');
+		let errorMessage = document.getElementById('error-message');
 		let calculateButton = document.getElementById('calculateBtn');
 
 		let closeButtons = document.querySelectorAll('.close-btn');
@@ -15,19 +17,34 @@ document.addEventListener('DOMContentLoaded', () => {
 				const itemName = selectedOption.textContent.split(" ")[1];
 				const resultBox = document.getElementById('result-box');
 				resultBox.innerHTML = '';
+
+				errorMessage.textContent = '';
 			
 			if (!price || isNaN(price) || price <= 0) {
-				document.getElementById('error-message').textContent = 'Please enter a valid price.';
-				errorModal.showModal();
+				errorMessage.textContent = 'Please enter a valid price.';
 				return;
-			}
+ 			}
+
+			// If modal is the better option for the error state (below)
+			// if (!price || isNaN(price) || price <= 0) {
+			// 	document.getElementById('error-message').textContent = 'Please enter a valid price.';
+			// 	errorModal.showModal();
+			// 	return;
+			// }
 
 			if (price < benchmark) {
-				document.getElementById('error-message').textContent = `Your price is too low for this item. Please enter a higher amount (at least $${benchmark}).`;
-				errorModal.showModal();
+				errorMessage.textContent = `Your price is too low for this item. Enter at least $${benchmark}.`;
 				return;
 			}
 
+			// If modal is the better option for the error state (below)
+			// if (price < benchmark) {
+			// 	document.getElementById('error-message').textContent = `Your price is too low for this item. Please enter a higher amount (at least $${benchmark}).`;
+			// 	errorModal.showModal();
+			// 	return;
+			// }
+			
+			// Quantity calculation
 			const quantity = Math.floor(price / benchmark);
 
 			let iconsDisplay = quantity <= 10 ? icon.repeat(quantity) : ''; 
