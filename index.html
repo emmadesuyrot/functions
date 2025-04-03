@@ -11,13 +11,17 @@
 	</head>
 	<body>
 		<header class="gutters">
-			<h1>Welcome to Emma's Spendy</h1>
+			<h1>Welcome to NYC Girl Math Edition!</h1>
 		</header>
+
+		<nav class="logo-container">
+		</nav>
+
 		<div class="container">
-			<h2>NYC Girl Math Edition!</h2>
 			<p>Ever find yourself doing “girl math”—like how many $5 coffees that pricey item equals? That’s how Emma rolls in NYC!</p>
-			<p>instantly convert any price into the things you already buy—no math required.</p>
-			
+			<p>Convert any price into the things you already buy—no math required.</p>
+		
+		<div class="input-group">
 			<label for="price">Enter a Price in $</label>
 			<input type="number" id="price" placeholder="e.g., 60" min="0">
 
@@ -38,7 +42,7 @@
 				<option value="80" data-icon="🏀">NBA Ticket</option>
 				<option value="500" data-icon="🚁">Helicopter Ride</option>
 			</select>
-
+		</div>
 			<button id="calculateBtn">See Benchmark Quantity</button>
 
 			<p>© 2025, Emma de Suyrot</p>
@@ -53,11 +57,11 @@
 			</dialog>
 
 			<!-- Error Modal -->
-			<dialog id="errorModal" class="modal">
+			<!-- <dialog id="errorModal" class="modal">
 				<div class="modal-content">
 					<button class="close-btn">&times;</button>
 					<h3>Error</h3>
-					<p id="error-message"></p>
+					<p id="error-message"></p> -->
 		</div>
 	</body>
 </html>

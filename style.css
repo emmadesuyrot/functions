@@ -1,5 +1,6 @@
 :root {
 	--primary-color: black;
+	--secondary-color: rgb(210, 31, 171);
 	--primary-font: 'Bagel Fat One';
 	--secondary-font: 'Open Sans', sans-serif;
 	--background-color: rgb(255, 194, 238);
@@ -8,10 +9,10 @@
 	--font-size-base: 1rem;
 	--font-size-heading: 2rem;
 	--font-size-subheading: 1.5rem;
+	--error-color: red;
 }
 
 body {
-	
 	background-color: var(--background-color);
 	color: var(--text-color);
 	font-family: var(--secondary-font);
@@ -23,6 +24,19 @@ body {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+}
+
+nav {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--secondary-color);
+	padding: 10px 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1;
 }
 
 h1, h2, h3 {
@@ -47,13 +61,21 @@ button {
 	margin: 10px;
 	padding: 10px;
 
-
 	cursor: pointer;
+}
+
+.input-group {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 5px;
+	width: 100%;
+	max-width: 350px;
 }
 
 input[type="number"], select {
 	padding: 10px;
-	font-size: 1rem;
+	font-size: var(--font-size-base);
 	width: 100%;
 	max-width: 300px;
 	margin: 0 auto;
@@ -112,7 +134,7 @@ label {
 
 /* text inside modal*/
 h3 {
-	font-size: 1.5rem;
+	font-size: var(--font-size-subheading);
 	margin-bottom: 15px;
 }
 
@@ -123,7 +145,7 @@ h3 {
 }
 
 .error-message {
-	color: red;
+	color: var(--error-color);
 	font-size: 14px;
 	margin-top: 5px;
 }
