@@ -14,8 +14,9 @@ document.addEventListener('DOMContentLoaded', () => {
 				const benchmark = parseFloat(benchmarkSelect.value);
 				const selectedOption = benchmarkSelect.options[benchmarkSelect.selectedIndex];
 				const icon = selectedOption.getAttribute('data-icon');
-				const itemName = selectedOption.textContent.split(" ")[1];
+				const itemName = selectedOption.textContent;
 				const resultBox = document.getElementById('result-box');
+				const itemTitle = selectedOption.getAttribute('title');
 				resultBox.innerHTML = '';
 
 				errorMessage.textContent = '';
@@ -49,6 +50,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 			let iconsDisplay = quantity <= 10 ? icon.repeat(quantity) : ''; 
 			let resultText = `You can buy <strong>${quantity}</strong> ${icon} ${itemName}.`;
+			if (itemTitle) {
+				resultText += `<br><em class="item-title">(${itemTitle})</em>`;
+			}
 
 			resultBox.innerHTML = `
 				<p>${resultText}</p>
