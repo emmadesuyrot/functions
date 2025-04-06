@@ -210,3 +210,15 @@ h3 {
 	flex-direction: column;
 	align-items: center;
 }
+
+@media (min-width: 600px) {
+
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media screen and (min-width: 1280px) {
+	
+}
