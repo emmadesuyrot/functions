@@ -10,73 +10,60 @@
 
 	</head>
 	<body>
-		<header class="gutters">
-			<h1>Welcome to NYC Girl Math Edition!</h1>
-		</header>
+		<div class="layout">
+			<nav class="logo-container">
+				<span class="logo-emoji">logo here</span>
+			</nav>
 
-		<nav class="logo-container">
-		</nav>
+			<header>
+				<h1>Girl Math NYC</h1>
+			</header>
 
-		<div class="container">
-			<p>Ever find yourself doing “girl math” like how many $5 coffees that pricey item equals? That’s how Emma rolls in NYC!</p>
-			<p>Convert any price into the things you already buy no math required.</p>
-		
-		<div class="input-group">
-			<label for="price">Enter a Price in $</label>
-			<input type="number" id="price" placeholder="e.g., 60" min="0">
-
-			<p id="error-message" class="error-message"></p>
+			<div class="container">
+				<h2>Ever wonder how many $5 lattes that new bag equals? This calculator breaks down your NYC splurges into everyday faves—just vibes, no guilt.</h2>
 			
-			<!-- input example from mdn to state the number control, examlple and min/max -->
-			<!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input -->
+			<div class="input-group">
+				<label for="price">Enter a Price in $</label>
+				<input type="number" id="price" placeholder="e.g., 60" min="0">
 
-			<label for="benchmark">Select a Benchmark Product</label>
-			<select id="benchmark">
-				<option value="3" data-icon="🚇" title="Subway Survival Tax">Metro Ticket</option>
-				<option value="3.50" data-icon="🚲" title="Hot Girl Cardio">City Bike</option>
-				<option value="5" data-icon="☕️" title="Hot Girl Fuel">Coffee</option>
-				<option value="10" data-icon="🍺" title="Situationship Tolerance Fee">Beer</option>
-				<option value="12" data-icon="🌯" title="Sad Desk Dinner Deluxe">Chipotle Bowl</option>
-				<option value="15" data-icon="👕" title="Main Character Uniform">Uniqlo Mini T-Shirt</option>
-				<option value="20" data-icon="🍹" title="Flirting Fee">Cocktail</option>
-				<option value="80" data-icon="🏀" title="He Thinks It’s a Personality">NBA Ticket</option>
-				<option value="500" data-icon="🚁" title="Delulu Transport Tier">Helicopter Ride</option>
-			</select>
-		</div>
-			<button id="calculateBtn">See Benchmark Quantity</button>
+				<p id="error-message" class="error-message"></p>
+				
+				<!-- input example from mdn to state the number control, examlple and min/max -->
+				<!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input -->
 
-			<table class="girl-math-sheet">
-				<tr>
-					<th>Category</th>
-					<th>Justification</th>
-				</tr>
-				<tr>
-					<td>Shopping</td>
-					<td>If it’s under $20, it’s basically free</td>
-				</tr>
-				<tr>
-					<td>Return Credit</td>
-					<td>Not my money anymore, bonus funds</td>
-				</tr>
-			</table>
+				<label for="benchmark">Select a Benchmark Product</label>
+				<select id="benchmark">
+					<option value="3" data-icon="🚇" title="Subway Survival Tax">Metro Ticket</option>
+					<option value="3.50" data-icon="🚲" title="Hot Girl Cardio">City Bike</option>
+					<option value="5" data-icon="☕️" title="Hot Girl Fuel">Coffee</option>
+					<option value="10" data-icon="🍺" title="Situationship Tolerance Fee">Beer</option>
+					<option value="12" data-icon="🌯" title="Sad Desk Dinner Deluxe">Chipotle Bowl</option>
+					<option value="15" data-icon="👕" title="Main Character Uniform">Uniqlo Mini T-Shirt</option>
+					<option value="20" data-icon="🍹" title="Flirting Fee">Cocktail</option>
+					<option value="80" data-icon="🏀" title="He Thinks It’s a Personality">NBA Ticket</option>
+					<option value="500" data-icon="🚁" title="Delulu Transport Tier">Helicopter Ride</option>
+				</select>
+			</div>
+				<button id="calculateBtn">See Benchmark Quantity</button>
 
-			<p>© 2025, Emma de Suyrot</p>
+				<p>© 2025, Emma de Suyrot</p>
 
-			<!-- Result Modal -->
-			<dialog id="resultModal" class="modal">
-				<div class="modal-content">
-					<span class="close-btn">&times;</span>
-					<h3>It's worth:</h3>
-					<div id="result-box" class="empty-state">Your result will appear here</div>
-				</div>
-			</dialog>
+				<!-- Result Modal -->
+				<dialog id="resultModal" class="modal">
+					<div class="modal-content">
+						<span class="close-btn">&times;</span>
+						<h3>It's worth:</h3>
+						<div id="result-box" class="empty-state">Your result will appear here</div>
+					</div>
+				</dialog>
 
-			<!-- Error Modal -->
-			<!-- <dialog id="errorModal" class="modal">
-				<div class="modal-content">
-					<button class="close-btn">&times;</button>
-					<h3>Error</h3>
-					<p id="error-message"></p> -->
+				<!-- Error Modal -->
+				<!-- <dialog id="errorModal" class="modal">
+					<div class="modal-content">
+						<button class="close-btn">&times;</button>
+						<h3>Error</h3>
+						<p id="error-message"></p> -->
+			</div>
 		</div>
 	</body>
 </html>

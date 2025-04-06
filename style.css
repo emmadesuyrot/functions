@@ -1,9 +1,9 @@
 :root {
-	--primary-color: black;
+	--primary-color: #602A14;
 	--secondary-color: rgb(210, 31, 171);
 	--primary-font: 'Bagel Fat One';
 	--secondary-font: 'Open Sans', sans-serif;
-	--background-color: rgb(255, 194, 238);
+	--background-color: #EEB5FA;
 	--text-color: black;
 	--button-padding: 12px 24px;
 	--font-size-base: 1rem;
@@ -31,8 +31,8 @@ nav {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: var(--secondary-color);
-	padding: 10px 0;
+	background-color: pink;
+	padding: 12px 0;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -42,17 +42,22 @@ nav {
 
 h1, h2, h3 {
 	color: var(--primary-color);
-	margin-bottom: 20px;
 }
 
 h1 {
 	font-family: var(--primary-font);
 	font-size: calc(var(--font-size-heading) * 1.2);
-	margin-bottom: 20px;
+	padding-top: 40PX;
+	margin: 0;
 }
 
 h2 {
-	font-size: var(--font-size-subheading);
+	font-size: 16px;
+	padding-bottom: 10px;
+}
+
+p {
+	color: var(--primary-color);
 }
 
 button {
@@ -63,15 +68,25 @@ button {
 	padding: 10px;
 
 	cursor: pointer;
+
+	border: 1px solid var(--primary-color);
+	background-color: white;
+	color: var(--primary-color);
+
 }
 
 .input-group {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	padding: 10px 1px 30px 1px;
+	margin-bottom: 10px;
 	gap: 5px;
 	width: 100%;
 	max-width: 350px;
+	background-color: pink;
+	border: 1px solid #ff9bd2;
+	border-radius: 20px;
 }
 
 select option {
@@ -82,7 +97,7 @@ select option {
 .input-group input,
 .input-group select {
 	background-color: white;
-	border: 2px hotpink;
+	border: 2px #e6007e;
 	box-shadow: 0 0 5px #ffb3ec;
 }
 
@@ -101,7 +116,7 @@ input[type="number"]:focus, select:focus {
 
 label {
 	display: block;
-	margin: 15px 0 5px;
+	margin: 5px 0 5px;
 }
 
 /* Style for the <dialog> modal */
@@ -163,27 +178,35 @@ h3 {
 	margin-top: 5px;
 }
 
-.girl-math-sheet {
-	border-collapse: collapse;
-	width: 100%;
-	max-width: 400px;
-	margin-top: 30px;
-	font-size: 0.9rem;
-	background: #fff0f7;
-	box-shadow: 0 0 10px rgba(255, 105, 180, 0.2);
-	border-radius: 10px;
-	overflow: hidden;
-}
-
-.girl-math-sheet th, .girl-math-sheet td {
-	border: 1px solid #ffb3ec;
-	padding: 10px;
-	text-align: center;
-}
-
 .item-title {
 	color: #888;
 	font-size: 0.9rem;
 	display: block;
 	margin-top: 4px;
+}
+
+.layout {
+	display: flex;
+	flex-direction: column;
+}
+
+/* Logo nav bar */
+.logo-container {
+	background-color: pink;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 12px;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo-emoji {
+	font-size: 16px;
+}
+
+.container {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
