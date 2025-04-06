@@ -1,9 +1,9 @@
 :root {
-	--primary-color: #602A14;
+	--primary-color: #2D5E92;
 	--secondary-color: rgb(210, 31, 171);
-	--primary-font: 'Bagel Fat One';
+	--primary-font: 'Schoolbell';
 	--secondary-font: 'Open Sans', sans-serif;
-	--background-color: #EEB5FA;
+	--background-color: #F0F3F2;
 	--text-color: black;
 	--button-padding: 12px 24px;
 	--font-size-base: 1rem;
@@ -24,14 +24,13 @@ body {
 	align-items: center;
 	justify-content: center;
 
-	background: linear-gradient(to bottom right, #ffe3f6, #fff5ff);
+	background-color: var(--background-color);
 }
 
 nav {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: pink;
 	padding: 12px 0;
 	position: fixed;
 	top: 0;
@@ -46,7 +45,7 @@ h1, h2, h3 {
 
 h1 {
 	font-family: var(--primary-font);
-	font-size: calc(var(--font-size-heading) * 1.2);
+	font-size: calc(var(--font-size-heading) * 1.5);
 	padding-top: 40PX;
 	margin: 0;
 }
@@ -84,21 +83,20 @@ button {
 	gap: 5px;
 	width: 100%;
 	max-width: 350px;
-	background-color: pink;
-	border: 1px solid #ff9bd2;
+	background-color: #D7E6E1;
+	border: 1px solid #2D5E92;
 	border-radius: 20px;
 }
 
 select option {
-	background-color: #fff0f6;
+	background-color: #2D5E92;
 	font-family: 'Open Sans', sans-serif;
 }
 
 .input-group input,
 .input-group select {
 	background-color: white;
-	border: 2px #e6007e;
-	box-shadow: 0 0 5px #ffb3ec;
+	border: 2px #2D5E92;
 }
 
 input[type="number"], select {
@@ -111,7 +109,7 @@ input[type="number"], select {
 }
 
 input[type="number"]:focus, select:focus {
-	border: 2px solid #ff00d4;
+	border: 2px solid #2D5E92;
 }
 
 label {
@@ -121,7 +119,7 @@ label {
 
 /* Style for the <dialog> modal */
 .modal {
-	position: fixed;
+	position: relative;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
@@ -131,7 +129,7 @@ label {
 	border: none;
 	border-radius: 10px;
 	background: white;
-	box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+	box-shadow: 2px 2px 10px black;
 }
 
 .modal::backdrop {
@@ -140,15 +138,14 @@ label {
 
 /* Modal Content */
 .modal-content {
-	position: relative;
 	text-align: center;
 }
 
 /* Close Button */
 .close-btn {
 	position: absolute;
-	top: 10px;
-	right: 15px;
+	top: 20px;
+	right: 30px;
 	font-size: 24px;
 	color: #aaa;
 	background: none;
@@ -192,12 +189,11 @@ h3 {
 
 /* Logo nav bar */
 .logo-container {
-	background-color: pink;
+	background-color: #2D5E92;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	padding: 12px;
-	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .logo-emoji {
@@ -212,13 +208,56 @@ h3 {
 }
 
 @media (min-width: 600px) {
-
+	
 }
+
 
 @media (min-width: 768px) {
 
 }
 
 @media screen and (min-width: 1280px) {
-	
+	h1 {
+		font-size: calc(var(--font-size-heading) * 2);
+		padding-top: 70px;
+	}
+
+	h2 {
+		font-size: calc(var(--font-size-subheading) * 1);
+		max-width: 600px;
+		margin-bottom: 0;
+	}
+
+	label {
+		font-size: 20px;
+	}
+
+	input[type="number"], select {
+		font-size: 18px;
+		max-width: 400px;
+		height: 50px;
+	}
+
+	.input-group {
+		justify-content: space-between;
+		max-width: 600px;
+	}
+
+	.container {
+		justify-content: center;
+		gap: 40px;
+	}
+
+	button {
+		font-size: 20px;
+		padding: 15 30 15 30;
+	}
+
+	.modal {
+		max-width: 600px;
+	}
+
+	.logo-emoji {
+		font-size: 24px;
+	}
 }
