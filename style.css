@@ -90,6 +90,12 @@ button {
 
 }
 
+button:disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+	pointer-events: none;
+}
+
 .input-group {
 	background-color: #FDC3F3;
 	border: 1px solid #de4de637;

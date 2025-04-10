@@ -6,6 +6,39 @@ document.addEventListener('DOMContentLoaded', () => {
 		let errorMessage = document.getElementById('error-message');
 		let calculateButton = document.getElementById('calculateBtn');
 		let closeButtons = document.querySelectorAll('.close-btn');
+		const priceInput = document.getElementById('price');
+		const benchmarkSelect = document.getElementById('benchmark');
+
+		// inputt must be added in order to choose benchmark and calculate total
+		// using parseFloat to turn string into a number 
+		// Source: https://developer.mozilla.org/en-US/docs/Web/API/Element/input_event
+		priceInput.addEventListener('input', () => {
+			const price = parseFloat(priceInput.value);
+			if (!isNaN(price) && price > 0) {
+				benchmarkSelect.disabled = false;
+			} else {
+				benchmarkSelect.disabled = true;
+				calculateButton.disabled = true;
+			}
+		});
+
+		// Adding the Select Benchmark as the default and disable the calculateButton 
+		benchmarkSelect.addEventListener('change', () => {
+			if (benchmarkSelect.value !== "") {
+				calculateButton.disabled = false;
+			} else {
+				calculateButton.disabled = true;
+			}
+		});
+
+		// Once benchmark is selected user can click/tap calculate
+		benchmarkSelect.addEventListener('change', () => {
+			if (benchmarkSelect.value) {
+				calculateButton.disabled = false;
+			} else {
+				calculateButton.disabled = true;
+			}
+		});
 
 		calculateButton.onclick = () => {
 				const price = document.getElementById('price').value;
