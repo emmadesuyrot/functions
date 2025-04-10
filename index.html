@@ -20,10 +20,10 @@
 			</header>
 
 			<div class="container">
-				<h2>Ever wonder how many $5 lattes that new bag equals? This calculator breaks down your NYC splurges into everyday faves—just vibes, no guilt.</h2>
+				<h2>Ever wonder how many $5 lattes that new bag equals? This calculator breaks down your NYC splurges into everyday faves, just vibes, no guilt.</h2>
 			
 			<div class="input-group">
-				<label for="price">Enter a Price in $</label>
+				<label for="price">Drop a price in $ (we won’t judge)</label>
 				<input type="number" id="price" placeholder="e.g., 60" min="0">
 
 				<p id="error-message" class="error-message"></p>
@@ -31,9 +31,9 @@
 				<!-- input example from mdn to state the number control, examlple and min/max -->
 				<!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input -->
 
-				<label for="benchmark">Select a Benchmark Product</label>
+				<label for="benchmark">Pick your goalpost product</label>
 				<select id="benchmark" disabled>
-					<option value="" disabled selected>Select Benchmark</option>
+					<option value="" disabled selected>Choose a target</option>
 					<option value="3" data-icon="🚇" title="Subway Survival Tax">Metro Ticket</option>
 					<option value="3.50" data-icon="🚲" title="Hot Girl Cardio">City Bike</option>
 					<option value="5" data-icon="☕️" title="Hot Girl Fuel">Coffee</option>
@@ -44,7 +44,7 @@
 					<option value="80" data-icon="🏀" title="He Thinks It’s a Personality">NBA Ticket</option>
 					<option value="500" data-icon="🚁" title="Delulu Transport Tier">Helicopter Ride</option>
 				</select>
-				<button id="calculateBtn" disabled>See Benchmark Quantity</button>
+				<button id="calculateBtn" disabled>Peep the reference</button>
 			</div>
 
 				<p class="footer">© 2025, Emma de Suyrot</p>
@@ -53,7 +53,7 @@
 				<dialog id="resultModal" class="modal">
 					<div class="modal-content">
 						<span class="close-btn">&times;</span>
-						<h3>It's worth</h3>
+						<h3>Girl Math</h3>
 						<div id="result-box" class="empty-state">Your result will appear here</div>
 					</div>
 				</dialog>
