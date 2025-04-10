@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		// let errorModal = document.getElementById('errorModal');
 		let errorMessage = document.getElementById('error-message');
 		let calculateButton = document.getElementById('calculateBtn');
-
 		let closeButtons = document.querySelectorAll('.close-btn');
 
 		calculateButton.onclick = () => {
