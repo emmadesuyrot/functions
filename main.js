@@ -61,27 +61,11 @@ document.addEventListener('DOMContentLoaded', () => {
 				errorMessage.textContent = 'Please enter a valid price.';
 				return;
  			}
-			// isNaN(price) to check if a value is not a number
-			// Source: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN
-
-			// If modal is the better option for the error state (below)
-			// if (!price || isNaN(price) || price <= 0) {
-			// 	document.getElementById('error-message').textContent = 'Please enter a valid price.';
-			// 	errorModal.showModal();
-			// 	return;
-			// }
 
 			if (price < benchmark) {
 				errorMessage.textContent = `Your price is too low for this item. Enter at least $${benchmark}.`;
 				return;
 			}
-
-			// If modal is the better option for the error state (below)
-			// if (price < benchmark) {
-			// 	document.getElementById('error-message').textContent = `Your price is too low for this item. Please enter a higher amount (at least $${benchmark}).`;
-			// 	errorModal.showModal();
-			// 	return;
-			// }
 			
 			// Quantity calculation
 			const quantity = Math.floor(price / benchmark);
