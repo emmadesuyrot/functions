@@ -56,18 +56,74 @@ document.addEventListener('DOMContentLoaded', () => {
 				resultBox.innerHTML = '';
 
 				errorMessage.textContent = '';
-			
-			if (!price || isNaN(price) || price <= 0) {
-				errorMessage.textContent = 'Please enter a valid price.';
-				return;
- 			}
 
-			if (price < benchmark) {
-				errorMessage.textContent = `Your price is too low for this item. Enter at least $${benchmark}.`;
+			// if price is less than or half 
+			if (price < benchmark && price > 0) {
+				const percentage = Math.floor((price / benchmark) * 100);
+				const selectedOption = benchmarkSelect.options[benchmarkSelect.selectedIndex];
+				const itemName = selectedOption.textContent;
+				const icon = selectedOption.getAttribute('data-icon');
+				const itemTitle = selectedOption.getAttribute('title');
+			
+				// personal modal message 
+				// Used 'switch' to check if the price is less than the benchmark and display a specific message based on the selected benchmark
+				// source: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch
+				let message = '';
+				let partialMessage = '';
+				switch (benchmark) {
+					case 3:
+						message = `Your wallet’s too slow for this metro ride 🚇💔`;
+						partialMessage = `You can afford <strong>${percentage}%</strong> enjoy the rats, not the ride 🚇🐀`;
+						break;
+					case 3.50:
+						message = `Your wallet’s still stuck in the bus lane, not the bike lane 🚲💸`;
+						partialMessage = `You can afford <strong>${percentage}%</strong> hope your feet are ready for this ‘luxury walk’ 🚶‍♂️👟`;
+						break;
+					case 5:
+						message = `Babe, your wallet’s too sleepy for this coffee ☕️💸`;
+						partialMessage = `You’re <strong>${percentage}%</strong> closer to this coffee, hope you like the lid ☕️🖤`;
+						break;
+					case 10:
+						message = `Math says no, but emotionally, you’ve totally got this beer 🍺🧮`;
+						partialMessage = `You’re <strong>${percentage}%</strong> closer to the beer, enjoy the empty glass 🍺🍻`;
+						break;
+					case 12:
+						message = `Your budget's too mild for this chipotle bowl 🌯🔥`;
+						partialMessage = `Congrats, you’ve got <strong>${percentage}%</strong> of the chipotle bowl! Enjoy the lettuce...`;
+						break;
+					case 15:
+						message = `Your wallet’s not sized right for this Uniqlo mini t-shirt 👕💔`;
+						partialMessage = `You've got <strong>${percentage}%</strong> of the Uniqlo mini t-shirt—just the label for now 👕🔖`;
+						break;
+					case 20:
+						message = `Oops, Your Wallet's Too Sober for This Cocktail 🍹💸`;
+						partialMessage = `You can afford about <strong>${percentage}%</strong> of it. Guess it’s just a sip 🍹💸`;
+						break;
+					case 80:
+						message = `When you’re all about courtside dreams, but not courtside funds 🏀💔`;
+						partialMessage = `You've got <strong>${percentage}%</strong> of the ticket... Guess that’s a VIP view of the parking lot 🏀🚗`;
+						break;
+					case 500:
+						message = `When your dreams are big, but your wallet’s tiny 🚁💔`;
+						partialMessage = `You can afford about <strong>${percentage}%</strong> of it, but if you wait long enough, some billionaire will offer you a ride to “network” 🚁💸`;
+						break;
+					default:
+						message = `You can’t fully afford this item ${icon} ${itemName}.`;
+						partialMessage = `You can afford about <strong>${percentage}%</strong> of it.`;
+				}
+			
+				// result
+				resultBox.innerHTML = `
+					<p>${message}</p>
+					<p>${partialMessage}</p>
+					${itemTitle ? `<em class="item-title">(${itemTitle})</em>` : ''}
+				`;
+				
+				resultModal.showModal();
 				return;
 			}
 			
-			// Quantity calculation
+			// quantity calculation
 			const quantity = Math.floor(price / benchmark);
 
 			let iconsDisplay = quantity <= 10 ? icon.repeat(quantity) : ''; 
