@@ -113,8 +113,9 @@ document.addEventListener('DOMContentLoaded', () => {
 				}
 			
 				// result
+				// removed message for now <p>${message}</p> might not be needed
 				resultBox.innerHTML = `
-					<p>${message}</p>
+					
 					<p>${partialMessage}</p>
 					${itemTitle ? `<em class="item-title">(${itemTitle})</em>` : ''}
 				`;
