@@ -117,7 +117,6 @@ document.addEventListener('DOMContentLoaded', () => {
 				resultBox.innerHTML = `
 					
 					<p>${partialMessage}</p>
-					${itemTitle ? `<em class="item-title">(${itemTitle})</em>` : ''}
 				`;
 				
 				resultModal.showModal();
