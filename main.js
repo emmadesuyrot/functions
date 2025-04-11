@@ -162,3 +162,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	initInteraction();
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+	let initInteraction = () => {
+		// Modal
+		let infoModal = document.getElementById('infoModal');
+		let infoBtn = document.getElementById('infoBtn');
+		let closeButtons = document.querySelectorAll('.close-btn');
+
+		// Info button click event to open modal
+		// similar to previous modal but modal contains info from <dialog id="infoModal" class="modal">
+		infoBtn.onclick = () => {
+			infoModal.showModal();
+		};
+
+		closeButtons.forEach(button => {
+			button.onclick = () => {
+				button.closest('dialog').close();
+			};
+		});
+
+		// close modal when clicking outside the modal
+		document.querySelectorAll('dialog').forEach(modal => {
+			modal.onclick = (event) => {
+				if (event.target === modal) {
+					modal.close();
+ 				}
+			};
+		});
+	};
+
+	initInteraction();
+});

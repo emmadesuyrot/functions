@@ -22,11 +22,21 @@
 			<div class="container">
 				<h2>Ever wonder how many $5 lattes ☕️ that new bag 👜 equals? This calculator breaks down your NYC splurges into everyday faves, just vibes, no guilt 💅</h2>
 			
+			<button id="infoBtn" class="cta-btn">Huh? Explain</button>
+			
 			<div class="input-group">
 				<label for="price">Drop a price in $ <span class="cheeky-note">(we won’t judge)</span></label>
 				<input type="number" id="price" placeholder="e.g., 600" min="0">
 
 				<p id="error-message" class="error-message"></p>
+
+				<dialog id="infoModal" class="modal">
+					<div class="modal-content">
+						<span class="close-btn">&times;</span>
+						<h3>What Is This Site?</h3>
+						<p>Okay, so here’s the vibe: this calculator is like if your budget had an Elle Woods glow-up. You plug in what you spent, and we’ll hit you with comparisons like, “Wait, did I really just spend that much on a Financial Times sub when I could’ve had beers 🍺 and a mani-pedi 💅?” Finance, but make it fun and fabulous because let’s be real, tracking expenses is a total snooze fest.</p>
+					</div>
+				</dialog>
 				
 				<!-- input example from mdn to state the number control, examlple and min/max -->
 				<!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input -->
@@ -49,7 +59,6 @@
 
 				<p class="footer">© 2025, Emma de Suyrot</p>
 
-				<!-- Result Modal -->
 				<dialog id="resultModal" class="modal">
 					<div class="modal-content">
 						<span class="close-btn">&times;</span>
@@ -57,13 +66,6 @@
 						<div id="result-box" class="empty-state">Your result will appear here</div>
 					</div>
 				</dialog>
-
-				<!-- Error Modal -->
-				<!-- <dialog id="errorModal" class="modal">
-					<div class="modal-content">
-						<button class="close-btn">&times;</button>
-						<h3>Error</h3>
-						<p id="error-message"></p> -->
 			</div>
 		</div>
 	</body>
