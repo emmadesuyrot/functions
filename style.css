@@ -215,7 +215,7 @@ label {
 
 /* Close Button */
 .close-btn {
-	font-size: 24px;
+	font-size: 50px;
 	color: var(--primary-color);
 	background-color: transparent;
 	border: none;
