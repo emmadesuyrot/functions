@@ -239,6 +239,10 @@ h3 {
 	align-items: center;
 }
 
+.footer {
+	padding: 19px 0;
+}
+
 @media (min-width: 600px) {
 	
 }
