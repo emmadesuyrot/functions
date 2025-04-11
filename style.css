@@ -71,6 +71,11 @@ h2 {
 	font-weight: 600;
 }
 
+.cheeky-note {
+	color: #0000006e;
+	font-size: 14px;
+}
+
 p {
 	color: var(--primary-color);
 }

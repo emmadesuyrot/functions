@@ -23,7 +23,7 @@
 				<h2>Ever wonder how many $5 lattes ☕️ that new bag 👜 equals? This calculator breaks down your NYC splurges into everyday faves, just vibes, no guilt 💅</h2>
 			
 			<div class="input-group">
-				<label for="price">Drop a price in $ (we won’t judge)</label>
+				<label for="price">Drop a price in $ <span class="cheeky-note">(we won’t judge)</span></label>
 				<input type="number" id="price" placeholder="e.g., 600" min="0">
 
 				<p id="error-message" class="error-message"></p>
@@ -31,20 +31,20 @@
 				<!-- input example from mdn to state the number control, examlple and min/max -->
 				<!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input -->
 
-				<label for="benchmark">Pick your goalpost product</label>
+				<label for="benchmark">What are we comparing to?</label>
 				<select id="benchmark" disabled>
-					<option value="" disabled selected>Choose a target</option>
+					<option value="" disabled selected>Pick your delulu reference</option>
 					<option value="3" data-icon="🚇" title="Subway Survival Tax">Metro Ticket</option>
 					<option value="3.50" data-icon="🚲" title="Hot Girl Cardio">City Bike</option>
-					<option value="5" data-icon="☕️" title="Hot Girl Fuel">Coffee</option>
-					<option value="10" data-icon="🍺" title="Situationship Tolerance Fee">Beer</option>
-					<option value="12" data-icon="🌯" title="Sad Desk Dinner Deluxe">Chipotle Bowl</option>
-					<option value="15" data-icon="👕" title="Main Character Uniform">Uniqlo Mini T-Shirt</option>
-					<option value="20" data-icon="🍹" title="Flirting Fee">Cocktail</option>
-					<option value="80" data-icon="🏀" title="He Thinks It’s a Personality">NBA Ticket</option>
-					<option value="500" data-icon="🚁" title="Delulu Transport Tier">Helicopter Ride</option>
+					<option value="5" data-icon="☕️" title="The ‘it’s an investment’ caffeine">Coffee</option>
+					<option value="10" data-icon="🍺" title="The 'one more round' tax">Beer</option>
+					<option value="12" data-icon="🌯" title="The ‘sad desk’ dinner deluxe">Chipotle Bowl</option>
+					<option value="15" data-icon="👕" title="The ‘I deserve a treat’ basic">Uniqlo Mini T-Shirt</option>
+					<option value="20" data-icon="🍹" title="The ‘I’m fun’ moment">Cocktail</option>
+					<option value="80" data-icon="🏀" title="Because you need to support the vibe">NBA Ticket</option>
+					<option value="500" data-icon="🚁" title="For when Uber just isn’t enough">Helicopter Ride</option>
 				</select>
-				<button id="calculateBtn" disabled>Peep the reference</button>
+				<button id="calculateBtn" disabled>Hit Me With It</button>
 			</div>
 
 				<p class="footer">© 2025, Emma de Suyrot</p>
