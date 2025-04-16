@@ -26,8 +26,10 @@
 			
 			<div class="input-group">
 				<label for="price">Drop a price in $ <span class="cheeky-note">(we won’t judge)</span></label>
-				<input type="number" id="price" placeholder="e.g., 600" min="0">
-
+				<div class="price-wrapper">
+					<span class="dollar-sign">$</span>
+					<input type="number" id="price" placeholder="e.g., 600" min="0" autofocus>
+				</div>
 				<p id="error-message" class="error-message"></p>
 
 				<dialog id="infoModal" class="modal">

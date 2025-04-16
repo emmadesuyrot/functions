@@ -99,6 +99,24 @@ p {
 	color: var(--primary-color);
 }
 
+.price-wrapper {
+	position: relative;
+}
+
+.dollar-sign {
+	position: absolute;
+	left: 12px;
+	padding-right: 12px;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 1rem;
+	color: gray;
+}
+
+.price-wrapper input {
+	padding-left: 20px; /*trying to figure out spacing*/
+}
+
 button {
 	padding: var(--button-padding);
 	font-size: var(--font-size-base);
@@ -133,6 +151,10 @@ button:disabled {
 	font-family: var(--primary-font);
 }
 
+button:focus, select:focus, input:focus {
+	outline: 2px solid #f0b;
+}
+
 .input-group {
 	background-color: #FDC3F3;
 	border: 1px solid #de4de637;
@@ -148,23 +170,35 @@ button:disabled {
 }
 
 select option {
-	background-color: #2D5E92;
 	font-family: 'Open Sans', sans-serif;
+}
+
+select:disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+
+select:not(:disabled), button:not(:disabled) {
+	opacity: 1;
+	cursor: pointer;
 }
 
 .input-group input,
 .input-group select {
 	background-color: white;
-	border: 2px #2D5E92;
 }
 
 input[type="number"], select {
-	padding: 10px;
+	padding: 14px;
 	font-size: var(--font-size-base);
 	width: 100%;
 	max-width: 300px;
 	margin: 0 auto;
 	border-radius: 5px;
+}
+
+.price-wrapper input[type="number"] {
+	padding-left: 28px;
 }
 
 input[type="number"]:focus, select:focus {
@@ -178,7 +212,7 @@ label {
 
 /* Style for the <dialog> modal */
 .modal {
-	position: relative;
+	position: fixed;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
