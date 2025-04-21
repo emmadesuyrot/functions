@@ -254,6 +254,9 @@ label {
 /* Modal Content */
 .modal-content {
 	text-align: center;
+	position: relative;
+	padding: 32px;
+	border-radius: 8px;
 }
 
 /* Close Button */
@@ -264,6 +267,10 @@ label {
 	border: none;
 	cursor: pointer;
 	font-family: var(--primary-font);
+
+	position: absolute;
+	top: -20px;
+	right: 10px;
 }
 
 #result-box {
