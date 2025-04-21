@@ -274,7 +274,7 @@ label {
 }
 
 #result-box {
-	font-family: var(--secondary-font);
+	font-family: var(--primary-font);
 	background-color: var(--secondary-color);
 	border-radius: 8px;
 	padding: 12px;
@@ -296,15 +296,16 @@ h3 {
 	color: #333;
 }
 
+/* percentage in modal*/
 #result-box strong {
-	color: #ff69b4;
+	color: #ff00a2;
 	font-weight: 700;
 	font-size: 40px;
 }
 
 .item-title {
 	color: var(--primary-color);
-	font-size: 0.9rem;
+	font-size: 16px;
 	display: block;
 	margin-top: 4px;
 	font-weight: 500;
@@ -340,6 +341,10 @@ h3 {
 	button:disabled {
 		padding: 14px 28px;
 		font-size: 18px;
+	}
+
+	h2 {
+		max-width: 400px;
 	}
 	
 }
