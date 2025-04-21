@@ -1,1 +1,1 @@
-# functions
+This 'Function' project was executed by Emma de Suyrot for the Typography and Interaction 2 course during the spring semester.
