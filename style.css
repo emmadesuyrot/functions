@@ -117,7 +117,7 @@ p {
 	padding-left: 20px; /*trying to figure out spacing*/
 }
 
-button {
+button, .try-again-btn {
 	padding: var(--button-padding);
 	font-size: var(--font-size-base);
 	border-radius: 8px;
@@ -255,10 +255,6 @@ label {
 	border: none;
 	cursor: pointer;
 	font-family: var(--primary-font);
-}
-
-.close-btn:hover {
-	color: black;
 }
 
 #result-box {

@@ -8,6 +8,22 @@ document.addEventListener('DOMContentLoaded', () => {
 		let closeButtons = document.querySelectorAll('.close-btn');
 		const priceInput = document.getElementById('price');
 		const benchmarkSelect = document.getElementById('benchmark');
+		const tryAgainBtn = document.getElementById('tryAgainBtn');
+
+		if (tryAgainBtn) {
+			tryAgainBtn.addEventListener('click', () => {
+				resultModal.close();
+
+				// Reset input and select
+				// Setting it to an empty string (''), to reset the input fields, so that there are no leftover data in the input fields
+				priceInput.value = '';
+				benchmarkSelect.value = '';
+
+				// Disable calculate button + benchmark select again
+				benchmarkSelect.disabled = true;
+				calculateButton.disabled = true;
+			});
+			}
 
 		// inputt must be added in order to choose benchmark and calculate total
 		// using parseFloat to turn string into a number 
@@ -39,6 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
 				calculateButton.disabled = true;
 			}
 		});
+
 
 		calculateButton.onclick = () => {
 				const price = document.getElementById('price').value;
