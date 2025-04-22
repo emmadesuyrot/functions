@@ -243,6 +243,8 @@ label {
 	border: 2px solid #de4de637;
 }
 
+
+
 .modal::backdrop {
 	background: rgba(0, 0, 0, 0.639);
 	backdrop-filter: blur(6px);
@@ -258,9 +260,10 @@ label {
 /* Modal Content */
 .modal-content {
 	text-align: center;
-	position: relative;
 	padding: 32px;
 	border-radius: 8px;
+
+	position: relative;
 }
 
 /* Close Button */
@@ -332,6 +335,7 @@ h3 {
 }
 
 @media (min-width: 400px) {
+	
 	h2 {
 		max-width: 380px;
 	}
@@ -356,7 +360,6 @@ h3 {
 	h2 {
 		max-width: 400px;
 	}
-	
 }
 
 @media screen and (min-width: 1280px) {
