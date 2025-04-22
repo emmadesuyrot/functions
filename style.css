@@ -95,11 +95,7 @@ p {
 	font-weight: 600;
 }
 
-.cta-btn:hover {
-	background-color: var(--secondary-color);
-	color: var(--primary-color);
-}
-
+/* for $ sign + input e.g., */
 .price-wrapper {
 	position: relative;
 }
@@ -335,6 +331,12 @@ h3 {
 	padding: 19px 0;
 }
 
+@media (min-width: 400px) {
+	h2 {
+		max-width: 380px;
+	}
+}
+
 @media (min-width: 600px) {
 	.cta-btn {
 		padding: 14px 28px;
@@ -377,6 +379,10 @@ h3 {
 		font-size: 18px;
 		max-width: 400px;
 		height: 50px;
+	}
+
+	.price-wrapper {
+		max-width: 400px;
 	}
 
 	.input-group {
