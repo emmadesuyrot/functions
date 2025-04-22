@@ -104,6 +104,14 @@ p {
 	position: relative;
 }
 
+.benchmark-title {
+	margin-top: 25px;
+}
+
+.benchmark-title.disabled {
+	opacity: 0.3;
+}
+
 .dollar-sign {
 	position: absolute;
 	left: 12px;

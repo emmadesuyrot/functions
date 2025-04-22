@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
 				resultModal.close();
 
 				// Reset input and select
-				// Setting it to an empty string (''), to reset the input fields, so that there are no leftover data in the input fields
+				// Setting it to an empty string (''), to reset the input fields, so that there are no leftover data
 				priceInput.value = '';
 				benchmarkSelect.value = '';
 
@@ -28,13 +28,17 @@ document.addEventListener('DOMContentLoaded', () => {
 		// inputt must be added in order to choose benchmark and calculate total
 		// using parseFloat to turn string into a number 
 		// Source: https://developer.mozilla.org/en-US/docs/Web/API/Element/input_event
+		const benchmarkLabel = document.querySelector('.benchmark-title');	
 		priceInput.addEventListener('input', () => {
 			const price = parseFloat(priceInput.value);
 			if (!isNaN(price) && price > 0) {
 				benchmarkSelect.disabled = false;
+				benchmarkLabel.classList.remove('disabled'); // /benchmark-title ref
+
 			} else {
 				benchmarkSelect.disabled = true;
 				calculateButton.disabled = true;
+				benchmarkLabel.classList.add('disabled');
 			}
 		});
 
@@ -71,8 +75,6 @@ document.addEventListener('DOMContentLoaded', () => {
 				const resultBox = document.getElementById('result-box');
 				const itemTitle = selectedOption.getAttribute('title');
 				resultBox.innerHTML = '';
-
-				errorMessage.textContent = '';
 
 			// if price is less than or half 
 			if (price < benchmark && price > 0) {

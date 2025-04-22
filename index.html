@@ -23,6 +23,15 @@
 				<h2>Ever wonder how many $5 lattes ☕️ that new bag 👜 equals? This calculator breaks down your NYC splurges into everyday faves, just vibes, no guilt 💅</h2>
 			
 			<button id="infoBtn" class="cta-btn">Huh? Explain</button>
+
+			<dialog id="infoModal" class="modal">
+				<div class="modal-content">
+					<span class="close-btn">&times;</span>
+					<h3>What Is This Site?</h3>
+					<p>This calculator is like your ROI guy👔, but for beers🍺.</p> 
+					<p>Enter what you’re about to spend, and it shows you what else you could get instead. Like, “Is this $80 jacketjacket worth skipping 8 beers🍺?” Smart money moves, but fun.</p>
+				</div>
+			</dialog>
 			
 			<div class="input-group">
 				<label for="price">Drop a price in $ <span class="cheeky-note">(we won’t judge)</span></label>
@@ -30,21 +39,11 @@
 					<span class="dollar-sign">$</span>
 					<input type="number" id="price" placeholder="e.g., 600" min="0" autofocus>
 				</div>
-				<p id="error-message" class="error-message"></p> 
 
-				<dialog id="infoModal" class="modal">
-					<div class="modal-content">
-						<span class="close-btn">&times;</span>
-						<h3>What Is This Site?</h3>
-						<p>This calculator is like your ROI guy👔, but for beers🍺.</p> 
-						<p>Enter what you’re about to spend, and it shows you what else you could get instead. Like, “Is this $80 jacketjacket worth skipping 8 beers🍺?” Smart money moves, but fun.</p>
-					</div>
-				</dialog>
-				
 				<!-- input example from mdn to state the number control, examlple and min/max -->
 				<!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input -->
 
-				<label for="benchmark">What are we comparing to?</label>
+				<label class="benchmark-title disabled" for="benchmark">What are we comparing to?</label>
 				<select id="benchmark" disabled>
 					<option value="" disabled selected>Pick your ✨delulu✨ reference</option>
 					<option value="3" data-icon="🚇" title="Subway Survival Tax">Metro Ticket 🚇</option>
