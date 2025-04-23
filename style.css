@@ -363,6 +363,11 @@ h3 {
 }
 
 @media screen and (min-width: 1280px) {
+	
+	P {
+		font-size: 20px;
+	}
+	
 	h1 {
 		font-size: calc(var(--font-size-heading) * 2);
 		padding-top: 70px;
