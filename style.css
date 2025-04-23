@@ -62,7 +62,7 @@ h1, h2, h3 {
 h1 {
 	font-family: var(--primary-font);
 	font-size: calc(var(--font-size-heading) * 1.5);
-	padding-top: 40PX;
+	padding-top: 40px;
 	margin: 0;
 }
 
@@ -164,7 +164,7 @@ button:focus, select:focus, input:focus {
 	background-color: #FDC3F3;
 	border: 1px solid #de4de637;
 	box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2);
-	padding: 25 10 30 10;
+	padding: 25px 10px 30px 10px;
 	width: 100%;
 	max-width: 350px;
 	display: flex;
@@ -365,7 +365,7 @@ h3 {
 @media screen and (min-width: 1280px) {
 	
 	P {
-		font-size: 20px;
+		font-size: 26px;
 	}
 	
 	h1 {
@@ -380,7 +380,7 @@ h3 {
 	}
 
 	label {
-		font-size: 20px;
+		font-size: 23px;
 	}
 
 	input[type="number"], select {
@@ -413,6 +413,10 @@ h3 {
 		position: fixed;
 	}
 
+	.item-title {
+		font-size: 20px;
+	}
+
 	.logo-emoji {
 		font-size: 24px;
 	}
@@ -429,6 +433,10 @@ h3 {
 
 	button:disabled {
 		padding: 16px 32px;
+		font-size: 20px;
+	}
+
+	.footer {
 		font-size: 20px;
 	}
 }
